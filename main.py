@@ -16,13 +16,13 @@ from sklearn.metrics import f1_score
 data1=pd.read_csv('data.csv')
 
 #Data Encoding
-data=pd.get_dummies(data1, drop_first=True)
+data2=pd.get_dummies(data1, drop_first=True)
 
 #Data Duplication 
+data3=data2.drop_duplicates()
 
-
-#Missing Values
-
+#Missing Value removel (If too much data is removed use the other value fill meathod (ex:mean,median,mode))
+data=data3.dropna(subset=['Cheating-data'])
 
 #X is Input(Training) and  Questions(Test)
 #Y is Output(Training) and Answers(Test)
