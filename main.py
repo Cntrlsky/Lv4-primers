@@ -13,7 +13,16 @@ from sklearn.metrics import recall_score
 from sklearn.metrics import f1_score
 
 #change the data.csv to the name of your data file. Make sure it is in the same directory as this code.
-data = pd.read_csv('data.csv')
+data1=pd.read_csv('data.csv')
+
+#Data Encoding
+data=pd.get_dummies(data1, drop_first=True)
+
+#Data Duplication 
+
+
+#Missing Values
+
 
 #X is Input(Training) and  Questions(Test)
 #Y is Output(Training) and Answers(Test)
