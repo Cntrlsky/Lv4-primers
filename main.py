@@ -8,17 +8,18 @@ import joblib
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
-from sklearn.preprocessing import StandardScaler
+from sklearn.metrics import precision_score 
+from sklearn.metrics import recall_score
+from sklearn.metrics import f1_score
 
 #change the data.csv to the name of your data file. Make sure it is in the same directory as this code.
 data = pd.read_csv('data.csv')
 
 #X is Input(Training) and  Questions(Test)
 #Y is Output(Training) and Answers(Test)
-#Make sure to change 'Cheating-data1' to the name of the column that has the answers in it. This is the column we are trying to predict.
-#Make sure to change 'Cheating-data2' to the name of the column that has the questions in it. This is the column we are using to predict the answers.
-X = data.drop('Cheating-data1', axis=1)
-Y = data['Cheating-data2']
+#Make sure to change 'Cheating-data' to the name of the column that has the answers in it. This is the column we are trying to predict.
+X = data.drop('Cheating-data', axis=1)
+Y = data['Cheating-data']
 
 #This will split the data 70 traning and 30 testing(random state can be any number just keep it consistent for all five models)
 X_train,X_test,Y_train,Y_test=train_test_split(
@@ -34,4 +35,10 @@ model.fit(X_train,Y_train)
 
 #this is the code to test the model
 Predict=model.predict(X_test)
-print("This models accuracy is",accuracy_score(Y_test,Predict))
+print("This models accuracy Score is",accuracy_score(Y_test,Predict))
+print("This Models Precision Score is", precision_score(Y_test,Predict,average='binary'))
+print("This Models Recall Score is", recall_score(Y_test,Predict,average='binary'))
+print("This Models F1 Score is:", f1_score(Y_test,Predict,average='binary'))
+
+#change the # to the number of the model
+joblib.dump(model, "model#.pkl")
