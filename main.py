@@ -27,7 +27,7 @@ X_train,X_test,Y_train,Y_test=train_test_split(
     ,test_size=0.3
     ,random_state=2007)
 
-#this is the model it self i dont belive we will need to change this
+#this is the model it self i dont belive we will need to change this as random forest is the best for anomaly detection which is the basis of all five of our models
 model=RandomForestClassifier()
 
 #this is the code to train the model
