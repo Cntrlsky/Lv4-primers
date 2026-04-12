@@ -1,9 +1,7 @@
-#This is the most basic code for a ML model 
 #DO NOT EDIT COPY ONLY
 
 #all imports needed for all five models
 from importlib.resources import path
-
 import numpy as np
 import pandas as pd
 import joblib
