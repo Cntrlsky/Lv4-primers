@@ -1,6 +1,3 @@
-import os
-print(os.getcwd())
-
 #This is the most basic code for a ML model 
 #DO NOT EDIT COPY ONLY
 
