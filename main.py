@@ -50,9 +50,9 @@ model.fit(X_train,Y_train)
 #this is the code to test the model
 Predict=model.predict(X_test)
 print("This models accuracy Score is",accuracy_score(Y_test,Predict))
-print("This Models Precision Score is", precision_score(Y_test,Predict,average='binary'))
-print("This Models Recall Score is", recall_score(Y_test,Predict,average='binary'))
-print("This Models F1 Score is:", f1_score(Y_test,Predict,average='binary'))
+print("This Models Precision Score is", precision_score(Y_test,Predict,average='weighted'))
+print("This Models Recall Score is", recall_score(Y_test,Predict,average='weighted'))
+print("This Models F1 Score is:", f1_score(Y_test,Predict,average='weighted'))
 
 #change the # to the number of the model
 joblib.dump(model,"model#.pkl")
