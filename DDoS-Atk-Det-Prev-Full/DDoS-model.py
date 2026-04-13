@@ -10,7 +10,7 @@ from sklearn.metrics import f1_score
 from sklearn.model_selection import train_test_split
 
 #change the data.csv to the name of your data file. Make sure it is in the same directory as this code.
-data01=pd.read_csv("DDoS-Atk-Det-Prev-/cicddos2019_dataset.csv")
+data01=pd.read_csv("DDoS-Atk-Det-Prev-Full/cicddos2019_dataset.csv")
 
 #Data Duplication 
 data02=data01.drop_duplicates()
