@@ -1,6 +1,4 @@
-#DO NOT EDIT COPY ONLY
-
-#all imports needed for all five models
+#All  Imports
 from importlib.resources import path
 import numpy as np
 import pandas as pd
@@ -11,7 +9,7 @@ from sklearn.metrics import precision_score
 from sklearn.metrics import recall_score
 from sklearn.metrics import f1_score
 
-#change the data.csv to the name of your data file. Make sure it is in the same directory as this code.(header=None is used to make sure the first row of the data is not used as the header)
+#Data is split for traning and testing purposes 
 data01=pd.read_csv("NIS-Model-Full/NSL_KDD_Test.csv",header=None)
 data11=pd.read_csv("NIS-Model-Full/NSL_KDD_Train.csv",header=None)
 
@@ -19,7 +17,7 @@ data11=pd.read_csv("NIS-Model-Full/NSL_KDD_Train.csv",header=None)
 data02=data01.rename(columns={41:'class'})
 data12=data11.rename(columns={41:'class'})
 
-#Data Duplication 
+#Data Duplication removal
 data03=data02.drop_duplicates()
 data13=data12.drop_duplicates()
 
@@ -29,7 +27,6 @@ data14=data13.dropna(subset=['class'])
 
 #X is Input(Training) and  Questions(Test)
 #Y is Output(Training) and Answers(Test)
-#Make sure to change 'Cheating-data' to the name of the column that has the answers in it. This is the column we are trying to predict.
 X_train=data14.drop('class',axis=1)
 Y_train=data14['class']
 X_test=data04.drop('class',axis=1)
@@ -44,7 +41,7 @@ X_combined.columns=X_combined.columns.astype(str)
 X_train=X_combined.iloc[:len(X_train), :]
 X_test=X_combined.iloc[len(X_train):, :]
 
-#this is the model it self i dont belive we will need to change this as random forest is the best for anomaly detection which is the basis of all five of our models
+#this is the model it self
 model=RandomForestClassifier()
 
 #this is the code to train the model
