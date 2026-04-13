@@ -13,8 +13,8 @@ from sklearn.metrics import recall_score
 from sklearn.metrics import f1_score
 
 #change the data.csv to the name of your data file. Make sure it is in the same directory as this code.(header=None is used to make sure the first row of the data is not used as the header)
-data01=pd.read_csv("main-test/NSL_KDD_Test.csv",header=None)
-data11=pd.read_csv("main-test/NSL_KDD_Train.csv",header=None)
+data01=pd.read_csv("NIS-Model-Full/NSL_KDD_Test.csv",header=None)
+data11=pd.read_csv("NIS-Model-Full/NSL_KDD_Train.csv",header=None)
 
 #This makess the 42 coloum of the data into the class as there is no header
 data02=data01.rename(columns={41:'class'})
