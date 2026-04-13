@@ -16,7 +16,7 @@ from sklearn.metrics import f1_score
 data01=pd.read_csv("main-test/NSL_KDD_Test.csv",header=None)
 data11=pd.read_csv("main-test/NSL_KDD_Train.csv",header=None)
 
-#This mkaes the 42 coloum of the data into the class as there is no header
+#This makess the 42 coloum of the data into the class as there is no header
 data02=data01.rename(columns={41:'class'})
 data12=data11.rename(columns={41:'class'})
 
