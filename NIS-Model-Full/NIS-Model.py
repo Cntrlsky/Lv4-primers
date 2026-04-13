@@ -57,5 +57,5 @@ print("This Models Precision Score is", precision_score(Y_test,Predict,average='
 print("This Models Recall Score is", recall_score(Y_test,Predict,average='weighted',zero_division=0))
 print("This Models F1 Score is:", f1_score(Y_test,Predict,average='weighted',zero_division=0))
 
-#change the # to the number of the model
-joblib.dump(model,"modeltest.pkl")
+#change whats after the r to wherever you want to save the .pkl file
+joblib.dump(model,r"C:\Users\hamza\Desktop\My Projects\Year Foundation\Lv4-Primers-Project\Project\PKL Files\model-one-NIS.pkl")
