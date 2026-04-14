@@ -8,3 +8,5 @@ DDoS Attack Detection and Prevention Datasets is from https://data.mendeley.com/
 Network Anomaly Detection Dataset is from https://www.kaggle.com/datasets/ziya07/network-traffic-anomaly-detection-dataset
 
 Botnet Detection System Dataset is from https://github.com/imfaisalmalik/CTU13-CSV-Dataset
+
+Zero-Day Attack Detection Dataset is https://www.kaggle.com/datasets/datasetengineer/zero-day-attack-detection-in-logistics-networks?select=zero_day_attack_detection_dataset_V1-400k.csv
