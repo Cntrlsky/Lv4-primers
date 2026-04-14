@@ -45,4 +45,4 @@ print("This Models Recall Score is", recall_score(Y_test,Predict,average='weight
 print("This Models F1 Score is:", f1_score(Y_test,Predict,average='weighted',zero_division=0))
 
 #change the # to the number of the model
-joblib.dump(model,"NtwrkAnmly.pkl")
+joblib.dump(model,r"C:\Users\hamza\Desktop\My Projects\Year Foundation\Lv4-Primers-Project\Project\PKL Files\model-three-NtwrkAnmly.pkl")
