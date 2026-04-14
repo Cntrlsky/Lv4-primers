@@ -11,7 +11,7 @@ from sklearn.model_selection import train_test_split
 
 #change the data.csv to the name of your data file. Make sure it is in the same directory as this code.
 data01=pd.read_csv("Botnet-Detection-Full/CTU13_Attack_Traffic.csv")
-data11=pd.read_csv("Botnet-Detection/CTU13_Normal_Traffic.csv")
+data11=pd.read_csv("Botnet-Detection-Full/CTU13_Normal_Traffic.csv")
 
 #Data Duplication 
 data02=data01.drop_duplicates()
