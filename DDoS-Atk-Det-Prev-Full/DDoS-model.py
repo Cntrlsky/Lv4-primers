@@ -1,4 +1,4 @@
-#all imports needed for all five models
+#All imports needed for the model
 import numpy as np
 import pandas as pd
 import joblib
@@ -9,32 +9,29 @@ from sklearn.metrics import recall_score
 from sklearn.metrics import f1_score
 from sklearn.model_selection import train_test_split
 
-#change the data.csv to the name of your data file. Make sure it is in the same directory as this code.
+#Reading the csv
 data01=pd.read_csv("DDoS-Atk-Det-Prev-Full/cicddos2019_dataset.csv")
 
-#Data Duplication 
+#Duplicate data removal 
 data02=data01.drop_duplicates()
 
-#Missing Value removel (If too much data is removed use the other value fill meathod (ex:mean,median,mode))
+#Removes any with missing value is class
 data03=data02.dropna(subset=['Class'])
 
-
+#encodes data in X and puts the header in Y
 X=pd.get_dummies(data03.drop(columns=['Class','Label']))
 Y=data03['Class']
 
-#X is Input(Training) and  Questions(Test)
-#Y is Output(Training) and Answers(Test)
-#Make sure to change 'Cheating-data' to the name of the column that has the answers in it. This is the column we are trying to predict.
+#X and Y are split into traning and testing at a 80 20 split
 X_train,X_test,Y_train,Y_test=train_test_split(
     X,Y
     ,test_size=0.20
-    ,random_state=2007
 )
 
-#this is the model it self i dont belive we will need to change this as random forest is the best for anomaly detection which is the basis of all five of our models
-model=RandomForestClassifier()
+#This is the model itself
+model=RandomForestClassifier(random_state=2007)
 
-#this is the code to train the model
+#This is the code to train the model
 model.fit(X_train,Y_train)
 
 #this is the code to test the model
@@ -44,5 +41,5 @@ print("This Models Precision Score is", precision_score(Y_test,Predict,average='
 print("This Models Recall Score is", recall_score(Y_test,Predict,average='weighted'))
 print("This Models F1 Score is:", f1_score(Y_test,Predict,average='weighted'))
 
-#change the # to the number of the model
+#Code to save the model as a .pkl file
 joblib.dump(model,r"C:\Users\hamza\Desktop\My Projects\Year Foundation\Lv4-Primers-Project\Project\PKL Files\model-2-DDoS.pkl")
