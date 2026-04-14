@@ -55,4 +55,4 @@ print("This Models Recall Score is", recall_score(Y_test,Predict,average='weight
 print("This Models F1 Score is:", f1_score(Y_test,Predict,average='weighted',zero_division=0))
 
 #change whats after the r to wherever you want to save the .pkl file
-joblib.dump(model,r"C:\Users\hamza\Desktop\My Projects\Year Foundation\Lv4-Primers-Project\Project\PKL Files\model-one-NIS.pkl")
+joblib.dump(model,r"C:\Users\hamza\Desktop\My Projects\Year Foundation\Lv4-Primers-Project\Project\PKL Files\model-1-NIS.pkl")
