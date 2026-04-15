@@ -10,7 +10,7 @@ from sklearn.metrics import f1_score
 from sklearn.model_selection import train_test_split
 
 #Code to read the .csv
-data01=pd.read_csv("Network-Anomaly-Detection-Full/embedded_system_network_security_dataset.csv")
+data01=pd.read_csv("Data/Raw/embedded_system_network_security_dataset.csv")
 
 #Duplicate data removal
 data02=data01.drop_duplicates()

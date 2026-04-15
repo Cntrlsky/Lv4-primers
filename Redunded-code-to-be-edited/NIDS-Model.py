@@ -10,8 +10,8 @@ from sklearn.metrics import recall_score
 from sklearn.metrics import f1_score
 
 #Data is split for traning and testing purposes 
-data01=pd.read_csv("NIDS-Model-Full/NSL_KDD_Test.csv",header=None)
-data11=pd.read_csv("NIDS-Model-Full/NSL_KDD_Train.csv",header=None)
+data01=pd.read_csv("Data/Raw/NSL_KDD_Test.csv",header=None)
+data11=pd.read_csv("Data/Raw/NSL_KDD_Train.csv",header=None)
 
 #This makes the 42nd coloum of the data into the class as there is no header
 data02=data01.rename(columns={41:'class'})
