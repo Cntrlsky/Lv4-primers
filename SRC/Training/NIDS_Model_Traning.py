@@ -12,4 +12,4 @@ Y_test=Y['class']
 
 model=Full(X_train,Y_train,X_test,Y_test)
 
-joblib.dump(model,r"C:\Users\hamza\Desktop\My Projects\Year Foundation\Lv4-Primers-Project\Project\PKL Files\NIDS_Model.pkl")
+joblib.dump(model,r"C:\Users\hamza\Desktop\My Projects\Year Foundation\Lv4-Primers-Project\Project\SRC\Models\NIDS_Model.pkl")
