@@ -1,10 +1,5 @@
 import pandas as pd
 import joblib
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import accuracy_score
-from sklearn.metrics import precision_score 
-from sklearn.metrics import recall_score
-from sklearn.metrics import f1_score
 from SRC.UTILS.Full import Full
 
 X=pd.read_csv("Data/Processed/NIDS_Model_Train.csv")

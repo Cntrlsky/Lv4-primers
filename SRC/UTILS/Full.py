@@ -1,5 +1,3 @@
-from pyexpat import model
-
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import precision_score 
@@ -9,6 +7,12 @@ from sklearn.metrics import f1_score
 def Full(X_train,Y_train,X_test,Y_test):
 
     model=RandomForestClassifier(random_state=2007)
+
+    if Y_train.ndim !=1:
+        Y_train=Y_train.squeeze()
+    
+    if Y_test.ndim !=1:
+        Y_test=Y_test.squeeze()
 
     model.fit(X_train,Y_train)
 
