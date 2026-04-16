@@ -1,3 +1,0 @@
-from sklearn.ensemble import RandomForestClassifier
-
-model=RandomForestClassifier(random_state=2007)

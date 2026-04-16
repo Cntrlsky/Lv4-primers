@@ -7,12 +7,12 @@ data1=data.drop_duplicates()
 
 data=data1.dropna(subset=['Class'])
 
-dataX=pd.get_dummies(data.drop(columns=['Class','Label']))
-dataY=data['Class']
+X=pd.get_dummies(data.drop(columns=['Class','Label']))
+Y=data['Class']
 
 processed_folder ="Data/Processed"
 
 os.makedirs(processed_folder,exist_ok=True)
 
-dataX.to_csv(os.path.join(processed_folder,"DDoS-Model-Processed-X.csv"),index=False)
-dataY.to_csv(os.path.join(processed_folder,"DDoS-Model-Processed-Y.csv"),index=False)
+X.to_csv(os.path.join(processed_folder,"DDoS_Model_Processed_X.csv"),index=False)
+Y.to_csv(os.path.join(processed_folder,"DDoS_Model_Processed_Y.csv"),index=False)
