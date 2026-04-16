@@ -1,5 +1,5 @@
 import pandas as pd
-from SRC.Feature_Engineering.NIDS_Feature_Engineering import NIDS_Feature_Engineering
+from SRC.Feature_Engineering.NIDS_Feature_Engineering import NIDS_Feature_Engineering as NIDS
 
 datatest=pd.read_csv("Data/Raw/NSL_KDD_Test.csv",header=None)
 datatrain=pd.read_csv("Data/Raw/NSL_KDD_Train.csv",header=None)
@@ -13,7 +13,7 @@ datatrain2=datatrain1.rename(columns={41:'class'})
 datatest3=datatest2.dropna(subset=['class'])
 datatrain3=datatrain2.dropna(subset=['class'])
 
-datatrain5,Y_train,datatest5,Y_test=NIDS_Feature_Engineering(datatrain3,datatest3)
+datatrain5,Y_train,datatest5,Y_test=NIDS(datatrain3,datatest3)
 
 datatrain5['class']=Y_train.reset_index(drop=True)
 datatest5['class']=Y_test.reset_index(drop=True)
