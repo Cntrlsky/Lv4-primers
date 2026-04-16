@@ -3,8 +3,8 @@ import joblib
 from sklearn.model_selection import train_test_split
 from SRC.UTILS.Full import Full
 
-X=pd.read_csv("Data/Processed/DDos_Model_Processed_X.csv")
-Y=pd.read_csv("Data/Processed/DDos_Model_Processed_Y.csv")
+X=pd.read_csv("Data/Processed/DDoS_Model_Processed_X.csv")
+Y=pd.read_csv("Data/Processed/DDoS_Model_Processed_Y.csv")
 
 X_train,X_test,Y_train,Y_test = train_test_split(
     X,
