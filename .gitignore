@@ -1,5 +1,8 @@
 # Python
 __pycache__/
+.coverage
+.pytest_cache/
+htmlcov
 *.pyc
 
 # Virtual environments
