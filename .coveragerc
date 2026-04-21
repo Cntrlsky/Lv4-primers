@@ -1,0 +1,8 @@
+[run]
+source = SRC
+omit =
+    SRC/Models/*
+    */__pycache__/*
+
+[report]
+show_missing = True
