@@ -3,6 +3,7 @@ __pycache__/
 .pytest_cache/
 htmlcov
 *.pyc
+.coverage
 
 # Virtual environments
 venv/
