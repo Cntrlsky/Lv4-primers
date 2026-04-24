@@ -7,4 +7,4 @@ Y=pd.read_csv("Data/Processed/Botnet_Y.csv")
 
 model=Full(X,Y)
 
-joblib.dump(model,r"C:\Users\hamza\Desktop\My Projects\Year Foundation\Lv4-Primers-Project\Project\SRC\Models\Botnet_Model.pkl")
+joblib.dump(model,"SRC/Models/Botnet_Model.pkl")
