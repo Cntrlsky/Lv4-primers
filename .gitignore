@@ -4,7 +4,7 @@ __pycache__/
 htmlcov
 *.pyc
 .coverage
-.png
+
 
 # Virtual environments
 venv/
@@ -21,7 +21,6 @@ venv/
 data/
 *.csv
 *.xlsx
-.txt
 
 # Models
 *.pkl
@@ -30,3 +29,6 @@ data/
 
 # Logs
 *.log
+
+*.png
+*.txt
