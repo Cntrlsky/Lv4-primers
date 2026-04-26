@@ -18,7 +18,6 @@ venv/
 .ipynb_checkpoints/
 
 # Data (IMPORTANT)
-data/
 *.csv
 *.xlsx
 
