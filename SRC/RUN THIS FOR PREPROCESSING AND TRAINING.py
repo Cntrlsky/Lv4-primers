@@ -22,6 +22,7 @@ NtwrkP()
 NIDSP()
 
 #Here all the Models are tranied and made and the prints of all the stats
+print("\n")
 print("These are the scores of the Botnet Model")
 BotnetM()
 print("\n\nThese are the scores of the DDoS Model")
@@ -30,3 +31,4 @@ print("\n\nThese are the scores of the Network Anomaly Model")
 NtwrkM()
 print("\n\nThese are the scores of the NIDS Model")
 NIDSM()
+print("\n")
