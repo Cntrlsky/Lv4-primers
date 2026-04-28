@@ -21,11 +21,6 @@ venv/
 *.csv
 *.xlsx
 
-# Models
-*.pkl
-*.joblib
-*.h5
-
 # Logs
 *.log
 
