@@ -3,9 +3,11 @@ import joblib
 from sklearn.model_selection import train_test_split
 from SRC.UTILS.Full import Full
 
-X=pd.read_csv("Data/Processed/Network_AnomalyX.csv")
-Y=pd.read_csv("Data/Processed/Network_AnomalyY.csv")
+def Network_Anomaly_Model_Traning() :
 
-model=Full(X,Y)
+    X=pd.read_csv("Data/Processed/Network_AnomalyX.csv")
+    Y=pd.read_csv("Data/Processed/Network_AnomalyY.csv")
 
-joblib.dump(model,"SRC/Models/Network_Anomaly_Model.pkl")
+    model=Full(X,Y)
+
+    joblib.dump(model,"SRC/Models/Network_Anomaly_Model.pkl")
